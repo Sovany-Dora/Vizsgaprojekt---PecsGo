@@ -1,1 +1,1 @@
-# Vizsgaprojekt---P-cs-Guide
+# Vizsgaprojekt---PecsGo
