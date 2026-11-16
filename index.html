@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6824ed">
+  <title>PécsGo — Go out. Get into Pécs.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="PécsGo home">PécsGo<span>✳</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="discover.html">Explore</a>
+      <a href="search.html">Search</a>
+      <a href="friendships.html">Friendships</a>
+      <a href="group_overview.html">Private groups</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-primary create-event"><span>＋</span> Create event</button>
+      <button class="icon-button notification" aria-label="Notifications">♧<i></i></button>
+      <button class="profile-button" aria-label="Account menu"><span class="avatar avatar-purple">AK</span><b>Anna</b><span class="chevron">⌄</span></button>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="explore">
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR CITY. YOUR PEOPLE. YOUR NEXT PLAN.</span>
+        <h1>Go out.<br>Get into Pécs.</h1>
+        <p>Big nights, little discoveries, and good company. Find your kind of thing, right around the corner.</p>
+        <form class="search-form" id="searchForm">
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="A gig, a gallery, a new favourite place..." aria-label="Search events">
+          <button type="submit">Let's go</button>
+        </form>
+        <a class="tiny-link" href="#events">↗ &nbsp;48 things happening this weekend in Pécs</a>
+      </div>
+      <a class="hero-feature" href="#event-analog" aria-label="View A little music. A lot of summer event">
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=85" alt="Crowd enjoying a live outdoor concert">
+        <span class="feature-tag">THE WEEKEND STARTS HERE ↗</span>
+        <span class="feature-caption"><small>FRI 18 JUN · NAPPALI COURTYARD</small><strong>A little music. A lot of summer.</strong><b>↗</b></span>
+      </a>
+    </section>
+
+    <section class="content-section" id="events">
+      <div class="category-row">
+        <span class="mood-label">What's your mood?</span>
+        <div class="filters" role="group" aria-label="Filter events by category">
+          <button class="filter-chip selected" data-filter="all">✿ &nbsp;For you</button>
+          <button class="filter-chip" data-filter="Live music">♫ &nbsp;Live music</button>
+          <button class="filter-chip" data-filter="Arts & culture">◉ &nbsp;Arts & culture</button>
+          <button class="filter-chip" data-filter="Outdoors">☼ &nbsp;Outdoors</button>
+          <button class="filter-chip" data-filter="Food & markets">◌ &nbsp;Food & markets</button>
+          <button class="filter-chip" data-filter="Workshops">✳ &nbsp;Workshops</button>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div><h2>Your weekend, looking good.</h2><p>Picked for your love of live music, creative things, and a little fresh air.</p></div>
+        <a href="#events" class="text-link" id="exploreAll">Explore all events ↗</a>
+      </div>
+
+      <div class="event-grid" id="eventGrid">
+        <article class="event-card" id="event-analog" data-category="Live music" data-search="courtyard sessions analog balaton music nappali">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85" alt="Musicians performing at a live music event">
+            <span class="image-label">Live music</span>
+            <button class="save-button" aria-label="Save Courtyard Sessions" aria-pressed="false">♡</button>
+          </div>
+          <div class="event-info">
+            <span class="event-date">FRI, JUN 18 · 19:00</span>
+            <h3>Courtyard Sessions: Analog Balaton</h3>
+            <p class="location">⌖ &nbsp;Nappali · Király Street</p>
+            <div class="event-bottom"><strong>3,500 Ft</strong><span>Outdoor</span></div>
+            <div class="social-proof"><span class="mini-avatar pink">L</span> Lil + 3 friends are going</div>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="Workshops" data-search="slow sunday pottery club workshop ceramics">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=85" alt="Hands shaping clay pottery on a pottery wheel">
+            <span class="image-label">Workshop</span>
+            <button class="save-button" aria-label="Save Slow Sunday Pottery Club" aria-pressed="false">♡</button>
+          </div>
+          <div class="event-info">
+            <span class="event-date">SUN, JUN 20 · 10:00</span>
+            <h3>Slow Sunday Pottery Club</h3>
+            <p class="location">⌖ &nbsp;Zsolnay Cultural Quarter</p>
+            <div class="event-bottom"><strong>6,000 Ft</strong><span>Indoor</span></div>
+            <div class="social-proof"><span class="mini-avatar lavender">EV</span> Eszter saved this</div>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="Outdoors" data-search="mecsek golden hour hike nature walking">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=85" alt="Hikers walking on a green mountain trail">
+            <span class="image-label">Outdoors</span>
+            <button class="save-button" aria-label="Save Mecsek Golden Hour Hike" aria-pressed="false">♡</button>
+          </div>
+          <div class="event-info">
+            <span class="event-date">SAT, JUN 19 · 16:30</span>
+            <h3>Mecsek Golden Hour Hike</h3>
+            <p class="location">⌖ &nbsp;Tettye Square · Meeting point</p>
+            <div class="event-bottom"><strong>Free</strong><span>Outdoor</span></div>
+            <div class="social-proof"><span class="mini-avatar lime">M</span> Márk + 2 friends are going</div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No events match that search. Try another keyword or category.</p>
+
+      <aside class="friends-banner" id="friends">
+        <div class="friend-avatars"><span class="avatar avatar-pink">LT</span><span class="avatar avatar-lime">MS</span><span class="avatar avatar-purple">EV</span></div>
+        <div><strong>Good plans are even better with your people.</strong><p>Lili, Márk, and 4 more friends have plans this weekend. See what they're into.</p></div>
+        <button class="btn btn-light" id="findFriends">♧ &nbsp;Find your friends</button>
+      </aside>
+
+      <section class="discover-section" id="groups">
+        <div class="section-heading">
+          <div><h2>More Pécs. Less ordinary.</h2></div>
+          <a href="#discover" class="text-link">All local discoveries ↗</a>
+        </div>
+        <div class="promo-grid" id="discover">
+          <article class="neighbourhood-promo">
+            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=85" alt="Colourful contemporary art gallery">
+            <div><span>THE LOCAL EDIT</span><h2>An afternoon in the Zsolnay Quarter.</h2><p>Art, coffee, and a few unexpected turns. Our favourite way to get a little lost.</p><a href="#events">Discover the neighbourhood ↗</a></div>
+          </article>
+          <article class="create-promo">
+            <span>MAKE SOMETHING HAPPEN</span><h2>Got a plan?<br>Let Pécs in on it.</h2><p>From a tiny workshop to a big night out. Your event belongs here.</p><button class="promo-link create-event">Create an event ↗</button>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="brand" href="#home">PécsGo<span>✳</span></a><p>A little more local. A lot more together.</p></div>
+    <nav aria-label="Footer navigation"><a href="#about">About us</a><a href="#guidelines">Community guidelines</a><a href="#privacy">Privacy</a><a href="#help">Help</a></nav>
+    <small>© 2027 PécsGo · Made for Pécs</small>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="modal" id="eventModal">
+    <form method="dialog" class="modal-content" id="createEventForm">
+      <button class="modal-close" aria-label="Close dialog">×</button>
+      <span class="modal-kicker">MAKE SOMETHING HAPPEN</span>
+      <h2>Put your plan on the map.</h2>
+      <p>Give your event a name and a few details to get started.</p>
+      <label>Event name<input required name="eventName" placeholder="e.g. Sunday sketch club"></label>
+      <label>Category<select name="category"><option>Live music</option><option>Arts & culture</option><option>Outdoors</option><option>Food & markets</option><option>Workshops</option></select></label>
+      <label>Date<input required type="date" name="date"></label>
+      <button class="btn btn-primary submit-event" type="submit">Create event</button>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="friendsModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close dialog">×</button>
+      <span class="modal-kicker">YOUR PEOPLE, YOUR PLANS</span>
+      <h2>Find your Pécs people.</h2>
+      <p>Connect your circle to see who's going where. This demo keeps everything local.</p>
+      <div class="friend-list"><div><span class="avatar avatar-pink">LT</span><b>Lili Tóth</b><span>3 events saved</span></div><div><span class="avatar avatar-lime">MS</span><b>Márk Szabó</b><span>2 plans this weekend</span></div><div><span class="avatar avatar-purple">EV</span><b>Eszter Varga</b><span>Pottery fan</span></div></div>
+      <button class="btn btn-primary submit-event" id="closeFriends">Sounds good</button>
+    </div>
+  </dialog>
+  <script src="script.js"></script>
+  <script src="event_creation.js"></script>
+</body>
+</html>
